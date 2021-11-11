@@ -1,0 +1,812 @@
+{
+	"situationsPerPass":"",
+	"getRandomly":"",
+	
+	"situations":[
+		
+		{
+			"title":"***** ВЫВОД ТРАНСФОРМАТОРА В РЕМОНТ *****  doc1_1",
+			
+			"steps":[
+				
+				{
+					"action":"REPAIR TRANSFORMATOR",
+					"action":"0",
+					
+					"set":[
+						{"target":"title", "data":"ВЫВОД ТРАНСФОРМАТОРА В РЕМОНТ"},
+						{"target":"instructions", "data":"<b>Последовательность операций при переключениях</b>\n\n1.  Перевести переключатель режима АВР SA в положение \n     <b>Ручной</b>\n\n2.  Перевести переключатель выбора отключения аппарата \n     S10 в положение <b>Отключение SW1</b>\n\n3.  Включить секционный выключатель SW3\n\n4.  Проверить включённое положение секционного \n     выключателя SW3\n\n5.  Проверить отключённое положение Ввод 1 SW1\n\n6.  Проверить наличие напряжения на 1 секции шин 0,4 кВ \n     по индикатору наличия напряжения на секции\n\n7.  Выкатить в ремонтное положение Ввод 1 SW1\n\n8.  Установить блокировочные замки\n\n9.  Вывесить плакат НЕ ВКЛЮЧАТЬ! РАБОТАЮТ ЛЮДИ!\n\n10. Проверить отсутствие напряжения на Ввод 1 SW1 по \n      индикатору наличия напряжения на вводе и вольтметру\n\n11. Проверить отсутствие напряжения при помощи \n      переносного указателя напряжения на ошиновке 0,4 кВ \n      Т–01А\n\n12. Установить переносное заземление на ошиновке 0,4 кВ \n      Т–01А\n\n13. Вывесить плакат ЗАЗЕМЛЕНО"},
+						{"target":"screen", "data":"selector"},
+						
+						{"target":"column_state", "data":{"id":"A1", "url":"situation_1/state_1/colonna_A1.png"}},
+						{"target":"column_state", "data":{"id":"A", "url":"situation_1/state_1/colonna_A.png"}},
+						{"target":"column_state", "data":{"id":"AB", "url":"situation_1/state_1/colonna_AB.png"}},
+						{"target":"column_state", "data":{"id":"B", "url":"situation_1/state_1/colonna_B.png"}},
+						{"target":"column_state", "data":{"id":"B1", "url":"situation_1/state_1/colonna_B1.png"}}
+					],
+					
+					"task":{"type":"comment"},
+					
+					"comment_success":"",
+					"comment_failed":"",
+					"comment_notification":"<b>Распределительный щит 0,4 кВ SG–3–01</b>\n1 секция работает от трансформатора Т–01А\n2 секции работает от трансформатора Т–01В\nСекционный выключатель разомкнут\nВведён АВР/ВНР"
+				},
+				
+				
+				{
+					"action":"1",
+					
+					"set":[
+						
+					],
+					
+					"task":{"type":"select", "target":"A"},
+					
+					"comment_success":"<font size='20'><b>Верно!</b></font>\n\nВы выбрали колонну Ввод 1, выполните необходимые операции.",
+					"comment_failed":"<font size='20'><b>Неверно!</b></font>\n\nНажмите на колонну Ввод 1 в первой секции распределительного щита.",
+					"comment_notification":"Необходимо вывести в ремонт силовой трансформатор Т–01А с переводом питания потребителей 1-ой секции распределительного щита SG–3–01 от трансформатора T–01B.\nВыберите колонну для оперативных действий.\n\n<font color='#828282'>Нажмите на колонну Ввод 1 в первой секции распределительного щита.</font>"
+				},
+				
+				
+				{
+					"action":"2",
+					
+					"set":[
+						{"target":"title", "data":"КОЛОННА ВВОД 1 SW 1"},
+						{"target":"screen", "data":"device"},
+						{"target":"column", "data":{"type":"A", "smoothing":"false"}},
+						
+						{"target":"a_v_arrow", "data":{"angle":"5"}},
+						
+						{"target":"a_phase_green", "data":{"state":"on"}},
+						{"target":"a_phase_red", "data":{"state":"on"}},
+						{"target":"a_phase_yellow", "data":{"state":"on"}},
+						
+						{"target":"a_lamp_green", "data":{"state":"off","text":"ОТКЛ."}},
+						{"target":"a_lamp_red", "data":{"state":"on","text":"ВКЛ."}},
+						{"target":"a_lamp_yellow", "data":{"state":"off","text":"АВАРИЯ"}},
+						
+						{"target":"a_button_green", "data":{"state":"normal","text":"ON"}},
+						{"target":"a_button_red", "data":{"state":"normal","text":"OFF"}},
+						
+						{"target":"a_grip_left", "data":{"state":"right","text":"Внеш Внутр"}},
+						{"target":"a_grip_right", "data":{"state":"left","text":"ABP Ручн"}},
+						{"target":"a_grip_down", "data":{"state":"up","text":"sw1 tie sw2", "size":"9"}},
+						
+						
+						{"target":"a_lamp_reset", "data":{"state":"off"}},
+						{"target":"a_big_arm", "data":{"state":"inside"}},
+						{"target":"a_caps", "data":{"state":"opened"}},
+						{"target":"a_push_on", "data":{"state":""}},
+						{"target":"a_push_off", "data":{"state":""}},
+						{"target":"a_indicator_l", "data":{"state":"on"}},
+						{"target":"a_indicator_r", "data":{"state":"discharged"}},
+						{"target":"a_button_bpfe", "data":{"state":"normal"}},
+						{"target":"a_key_up1", "data":{"state":"center_no_key"}},
+						{"target":"a_key_up2", "data":{"state":"center_no_key"}},
+						{"target":"a_key_left1", "data":{"state":"center_no_key"}},
+						{"target":"a_key_left2", "data":{"state":"center_no_key"}},
+						{"target":"a_latch_up", "data":{"state":"inside"}},
+						{"target":"a_latch_left", "data":{"state":"inside"}},
+						{"target":"a_latch_right", "data":{"state":"inside"}},
+						{"target":"a_button_confirm", "data":{"state":"normal"}},
+						{"target":"a_s_arrow", "data":{"state":"up"}},
+						{"target":"a_handle_hole", "data":{"state":""}},
+						{"target":"a_handle", "data":{"state":"none"}},
+						{"target":"a_hidden_handle", "data":{"state":"hidden"}},
+						
+						{"target":"a_cells", "data":{"state":"hidden"}}
+					],
+					
+					"task":{"type":"pick", "target":"a_grip_right", "value":"right"},
+					
+					"comment_success":"<font size='20'><b>Верно!</b></font>\n\nПереключатель режима АВР SA\nв положении <b>Ручной</b>.",
+					"comment_failed":"<font size='20'><b>Неверно!</b></font>\n\nНажмите на переключатель и поверните рукоятку вправо.",
+					"comment_notification":"Переведите переключатель режима АВР SA в положение <b>Ручной</b>.\n\n<font color='#828282'>Нажмите на переключатель и поверните рукоятку в нужную сторону.</font>"
+				},
+				
+				
+				{
+					"action":"3",
+					
+					"set":[
+						
+					],
+					
+					"task":{"type":"pick", "target":"a_grip_down", "value":"left"},
+					
+					"comment_success":"<font size='20'><b>Верно!</b></font>\n\nПереключатель в положении <b>Отключение SW1</b>.",
+					"comment_failed":"<font size='20'><b>Неверно!</b></font>\n\nНажмите на переключатель и поверните рукоятку влево.",
+					"comment_notification":"Переведите переключатель выбора отключения аппарата S10 в положение <b>Отключение SW1</b>.\n\n<font color='#828282'>Нажмите на переключатель и поверните рукоятку в нужную сторону.</font>"
+				},
+				
+				
+				{
+					"action":"4",
+					
+					"set":[
+						
+					],
+					
+					"task":{"type":"wait", "value":"0.5"}
+				},
+				
+				
+				{
+					"action":"5",
+					
+					"set":[
+						{"target":"title", "data":"ВЫВОД ТРАНСФОРМАТОРА В РЕМОНТ"},
+						{"target":"screen", "data":"selector"},
+						
+						{"target":"column_state", "data":{"id":"A", "url":"situation_1/state_2/colonna_A.png"}}
+					],
+					
+					"task":{"type":"select", "target":"AB"},
+					
+					"comment_success":"<font size='20'><b>Верно!</b></font>\n\nВы выбрали колонну с секционным выключателем, выполните необходимые операции.",
+					"comment_failed":"<font size='20'><b>Неверно!</b></font>\n\nВыберите колонну с секционным выключателем.",
+					"comment_notification":"Включите секционный выключатель SW3.\n\n<font color='#828282'>Выберите колонну для оперативных действий.</font>"
+				},
+				
+				
+				{
+					"action":"6",
+					
+					"set":[
+						{"target":"title", "data":"СЕКЦИОННАЯ КОЛОННА SW 3"},
+						{"target":"screen", "data":"device"},
+						{"target":"column", "data":{"type":"AB", "smoothing":"false"}},
+						
+						{"target":"ab_lamp_green", "data":{"state":"on","text":"ОТКЛ"}},
+						{"target":"ab_lamp_red", "data":{"state":"off","text":"ВКЛ"}},
+						{"target":"ab_lamp_yellow", "data":{"state":"off","text":"АВАРИЯ"}},
+						
+						{"target":"ab_button_green", "data":{"state":"normal","text":"ON"}},
+						{"target":"ab_button_red", "data":{"state":"normal","text":"OFF"}},
+						
+						
+						{"target":"ab_lamp_reset", "data":{"state":"off"}},
+						{"target":"ab_big_arm", "data":{"state":"inside"}},
+						{"target":"ab_caps", "data":{"state":"opened"}},
+						{"target":"ab_push_on", "data":{"state":""}},
+						{"target":"ab_push_off", "data":{"state":""}},
+						{"target":"ab_indicator_l", "data":{"state":"off"}},
+						{"target":"ab_indicator_r", "data":{"state":"charged_ok"}},
+						{"target":"ab_button_bpfe", "data":{"state":"normal"}},
+						{"target":"ab_key_up1", "data":{"state":"center_no_key"}},
+						{"target":"ab_key_up2", "data":{"state":"center_no_key"}},
+						{"target":"ab_key_left1", "data":{"state":"center_no_key"}},
+						{"target":"ab_key_left2", "data":{"state":"center_no_key"}},
+						{"target":"ab_latch_up", "data":{"state":"inside"}},
+						{"target":"ab_latch_left", "data":{"state":"inside"}},
+						{"target":"ab_latch_right", "data":{"state":"inside"}},
+						{"target":"ab_button_confirm", "data":{"state":"normal"}},
+						{"target":"ab_s_arrow", "data":{"state":"up"}},
+						{"target":"ab_handle_hole", "data":{"state":""}},
+						{"target":"ab_handle", "data":{"state":"none"}},
+						{"target":"ab_hidden_handle", "data":{"state":"hidden"}},
+						
+						{"target":"ab_inside", "data":{"state":"hidden"}}
+					],
+					
+					"task":{"type":"pick", "target":"ab_button_green", "value":"down"},
+					
+					"comment_success":"<font size='20'><b>Верно!</b></font>\n\nСекционный выключатель включён.",
+					"comment_failed":"<font size='20'><b>Неверно!</b></font>\n\nНажмите на кнопку включения выключателя SW3.",
+					"comment_notification":"<font color='#828282'>Нажмите на кнопку включения выключателя SW3.</font>"
+				},
+				
+				
+				{
+					"action":"7",
+					
+					"set":[
+						{"target":"ab_button_green", "data":{"state":"normal","text":"ON"}},
+						{"target":"ab_lamp_green", "data":{"state":"off","text":"ОТКЛ"}},
+						{"target":"ab_lamp_red", "data":{"state":"on","text":"ВКЛ"}},
+						{"target":"ab_indicator_l", "data":{"state":"on"}},
+						{"target":"ab_indicator_r", "data":{"state":"discharged"}}
+					],
+					
+					"task":{"type":"wait", "value":"1.0"}
+				},
+				
+				
+				{
+					"action":"8",
+					
+					"set":[
+						{"target":"title", "data":"ВЫВОД ТРАНСФОРМАТОРА В РЕМОНТ"},
+						{"target":"screen", "data":"selector"},
+						
+						{"target":"column_state", "data":{"id":"A", "url":"situation_1/state_3/colonna_A.png"}},
+						{"target":"column_state", "data":{"id":"AB", "url":"situation_1/state_3/colonna_AB.png"}},
+						{"target":"column_state", "data":{"id":"B", "url":"situation_1/state_3/colonna_B.png"}}
+					],
+					
+					"task":{"type":"comment"},
+					
+					"comment_success":"",
+					"comment_failed":"",
+					"comment_notification":"Проверьте наличие напряжения на 1-й секции шин 0,4 кВ по индикатору наличия напряжения на секции."
+				},
+				
+				
+				{
+					"action":"9",
+					
+					"set":[
+						
+					],
+					
+					"task":{"type":"wait", "value":"5.0"}
+				},
+				
+				
+				{
+					"action":"10",
+					
+					"set":[
+						
+					],
+					
+					"task":{"type":"askfix", "target":"continue"},
+					
+					"comment_success":"<font size='20'><b>Верно!</b></font>\n\nНапряжение на 1-й секции шин присутствует, выключатель Ввод 1 SW1 отключён, можно продолжать операции.",
+					"comment_failed":"<font size='20'><b>Неверно!</b></font>\n\nОперативное состояние электрического оборудования соответствует норме, можно продолжать операции по выводу в ремонт силового трансформатора Т–01А.",
+					"comment_notification":"По результатам проверки выберите дальнейшее действие."
+				},
+				
+				
+				{
+					"action":"10",
+					
+					"set":[
+						{"target":"title", "data":"ВЫВОД ТРАНСФОРМАТОРА В РЕМОНТ"},
+						{"target":"screen", "data":"selector"},
+						
+						{"target":"column_state", "data":{"id":"A", "url":"situation_1/state_3/colonna_A.png"}},
+						{"target":"column_state", "data":{"id":"AB", "url":"situation_1/state_3/colonna_AB.png"}},
+						{"target":"column_state", "data":{"id":"B", "url":"situation_1/state_3/colonna_B.png"}}
+					],
+					
+					"task":{"type":"select", "target":"A"},
+					
+					"comment_success":"<font size='20'><b>Верно!</b></font>\n\nВы выбрали колонну Ввод 1, выполните необходимые операции.",
+					"comment_failed":"<font size='20'><b>Неверно!</b></font>\n\nНажмите на колонну Ввод 1 в первой секции распределительного щита.",
+					"comment_notification":"Продолжите операции по выводу в ремонт силового трансформатора Т–01А.\n\n<font color='#828282'>Нажмите на колонну Ввод 1 в первой секции распределительного щита.</font>"
+				},
+				
+				
+				{
+					"action":"11",
+					
+					"set":[
+						{"target":"title", "data":"КОЛОННА ВВОД 1 SW 1"},
+						{"target":"screen", "data":"device"},
+						{"target":"column", "data":{"type":"A", "smoothing":"false"}},
+						
+						{"target":"a_v_arrow", "data":{"angle":"5"}},
+						
+						{"target":"a_phase_green", "data":{"state":"on"}},
+						{"target":"a_phase_red", "data":{"state":"on"}},
+						{"target":"a_phase_yellow", "data":{"state":"on"}},
+						
+						{"target":"a_lamp_green", "data":{"state":"on","text":"ОТКЛ."}},
+						{"target":"a_lamp_red", "data":{"state":"off","text":"ВКЛ."}},
+						{"target":"a_lamp_yellow", "data":{"state":"off","text":"АВАРИЯ"}},
+						
+						{"target":"a_button_green", "data":{"state":"normal","text":"ON"}},
+						{"target":"a_button_red", "data":{"state":"normal","text":"OFF"}},
+						
+						{"target":"a_grip_left", "data":{"state":"right","text":"Внеш Внутр"}},
+						{"target":"a_grip_right", "data":{"state":"right","text":"ABP Ручн"}},
+						{"target":"a_grip_down", "data":{"state":"left","text":"sw1 tie sw2"}},
+						
+						
+						{"target":"a_lamp_reset", "data":{"state":"off"}},
+						{"target":"a_big_arm", "data":{"state":"inside"}},
+						{"target":"a_caps", "data":{"state":"opened"}},
+						{"target":"a_push_on", "data":{"state":""}},
+						{"target":"a_push_off", "data":{"state":""}},
+						{"target":"a_indicator_l", "data":{"state":"off"}},
+						{"target":"a_indicator_r", "data":{"state":"charged_ok"}},
+						{"target":"a_button_bpfe", "data":{"state":"normal"}},
+						{"target":"a_key_up1", "data":{"state":"center_no_key"}},
+						{"target":"a_key_up2", "data":{"state":"center_no_key"}},
+						{"target":"a_key_left1", "data":{"state":"center_no_key"}},
+						{"target":"a_key_left2", "data":{"state":"center_no_key"}},
+						{"target":"a_latch_up", "data":{"state":"inside"}},
+						{"target":"a_latch_left", "data":{"state":"inside"}},
+						{"target":"a_latch_right", "data":{"state":"inside"}},
+						{"target":"a_button_confirm", "data":{"state":"normal"}},
+						{"target":"a_s_arrow", "data":{"state":"up"}},
+						{"target":"a_handle_hole", "data":{"state":""}},
+						{"target":"a_handle", "data":{"state":"none"}},
+						{"target":"a_hidden_handle", "data":{"state":"hidden"}},
+						
+						{"target":"a_cells", "data":{"state":"hidden"}}
+					],
+					
+					"task":{"type":"comment"},
+					
+					"comment_notification":"Проверьте отключённое положение выключателя Ввод 1 SW1."
+				},
+				
+				
+				{
+					"action":"12",
+					
+					"set":[
+						
+					],
+					
+					"task":{"type":"wait", "value":"5.0"}
+				},
+				
+				
+				{
+					"action":"13",
+					
+					"set":[
+						
+					],
+					
+					"task":{"type":"askfix", "target":"continue"},
+					
+					"comment_success":"<font size='20'><b>Верно!</b></font>\n\nНапряжение до Ввод 1 присутствует, выключатель Ввод 1 SW1 отключён, можно продолжать операции.",
+					"comment_failed":"<font size='20'><b>Неверно!</b></font>\n\nОперативное состояние электрического оборудования соответствует норме, можно продолжать операции\nпо выводу в ремонт силового трансформатора Т–01А.",
+					"comment_notification":"По результатам проверки выберите дальнейшее действие."
+				},
+				
+				
+				{
+					"action":"14",
+					
+					"set":[
+						
+					],
+					
+					"task":{"type":"tool", "target":"a_handle_hole", "value":"handle"},
+					
+					"comment_success":"<font size='20'><b>Верно!</b></font>\n\nРукоятка управления вставлена\nв гнездо.",
+					"comment_failed":"<font size='20'><b>Неверно!</b></font>\n\nПеретащите рукоятку управления с панели инструментов в гнездо для присоединения на панели шасси.",
+					"comment_notification":"Выкатите выключатель Ввод 1 SW1 в ремонтное положение.\n\n<font color='#828282'>Перетащите рукоятку управления с панели инструментов\nв гнездо для присоединения на панели шасси.</font>"
+				},
+				
+				
+				{
+					"action":"15",
+					
+					"set":[
+						{"target":"a_handle", "data":{"state":"up"}},
+						{"target":"a_hidden_handle", "data":{"state":"deployed"}}
+					],
+					
+					"task":{"type":"pick", "target":"a_handle", "value":"left"},
+					
+					"comment_success":"<font size='20'><b>Верно!</b></font>\n\nВыключатель выкачен в положение <b>Испытание</b>. Главные силовые цепи разомкнуты, а вторичные замкнуты.",
+					"comment_failed":"<font size='20'><b>Неверно!</b></font>\n\nНажмите на рукоятку и, не отпуская, вращайте против часовой стрелки до упора.",
+					"comment_notification":"Чтобы переместить выключатель из положения <b>Вкачено</b>\nв положение <b>Испытание</b> вращайте рукояткой управления против часовой стрелки до упора.\n\n<font color='#828282'>Нажмите на рукоятку и, не отпуская, вращайте против часовой стрелки до упора.</font>"
+				},
+				
+				
+				{
+					"action":"16",
+					
+					"set":[
+						{"target":"a_handle", "data":{"state":"left"}},
+						{"target":"a_s_arrow", "data":{"state":"middle"}}
+					],
+					
+					"task":{"type":"pick", "target":"a_button_confirm", "value":"down"},
+					
+					"comment_success":"<font size='20'><b>Верно!</b></font>\n\nМожно продолжить перемещение выключателя.",
+					"comment_failed":"<font size='20'><b>Неверно!</b></font>\n\nНажмите на кнопку квитирования.",
+					"comment_notification":"Продолжите перемещение выключателя.\n\n<font color='#828282'>Нажмите на кнопку квитирования.</font>"
+				},
+				
+				
+				{
+					"action":"17",
+					
+					"set":[
+						{"target":"a_button_confirm", "data":{"state":"normal"}},
+						{"target":"a_handle", "data":{"state":"up", "angle":"-90"}}
+					],
+					
+					"task":{"type":"pick", "target":"a_handle", "value":"left"},
+					
+					"comment_success":"<font size='20'><b>Верно!</b></font>\n\nВыключатель выкачен в положение <b>Выкачено</b>. Главные и вторичные цепи разомкнуты.",
+					"comment_failed":"<font size='20'><b>Неверно!</b></font>\n\nНажмите на рукоятку и, не отпуская, вращайте против часовой стрелки до упора.",
+					"comment_notification":"Чтобы переместить выключатель из положения <b>Испытание</b> в положение <b>Выкачено</b> вращайте рукояткой управления против часовой стрелки до упора.\n\n<font color='#828282'>Нажмите на рукоятку и, не отпуская, вращайте против часовой стрелки до упора.</font>"
+				},
+				
+				
+				{
+					"action":"18",
+					
+					"set":[
+						{"target":"a_cells", "data":{"state":"normal"}},
+						{"target":"a_handle", "data":{"state":"left"}},
+						{"target":"a_lamp_green", "data":{"state":"off","text":"ОТКЛ."}},
+						{"target":"a_s_arrow", "data":{"state":"down"}}
+					],
+					
+					"task":{"type":"comment"},
+					
+					"comment_notification":"Проведены технические мероприятия — выключатель\nВвод 1 SW1 перемещён на тележку для проведения ТО."
+				},
+				
+				
+				{
+					"action":"19",
+					
+					"set":[
+						{"target":"a_handle", "data":{"state":"none"}},
+						{"target":"a_hidden_handle", "data":{"state":"hidden"}}
+					],
+					
+					"task":{"type":"wait", "value":"0.5"}
+				},
+				
+				
+				{
+					"action":"20",
+					
+					"set":[
+						
+					],
+					
+					"task":{"type":"tool", "target":"a_cells", "value":"padlock"},
+					
+					"comment_success":"<font size='20'><b>Верно!</b></font>\n\nУстановлена блокировка навесными замками.",
+					"comment_failed":"<font size='20'><b>Неверно!</b></font>\n\nПеретащите замок с панели инструментов на изолирующие шторки.",
+					"comment_notification":"Установите блокировку изолирующих шторок навесными замками.\n\n<font color='#828282'>Перетащите замок с панели инструментов на изолирующие шторки.</font>"
+				},
+				
+				
+				{
+					"action":"21",
+					
+					"set":[
+						{"target":"a_cells", "data":{"state":"locked"}}
+					],
+					
+					"task":{"type":"tool", "target":"a_latch_right", "value":"padlock"},
+					
+					"comment_success":"<font size='20'><b>Верно!</b></font>\n\nУстановлена блокировка навесными замками.",
+					"comment_failed":"<font size='20'><b>Неверно!</b></font>\n\nПеретащите замок с панели инструментов на место петли для блокировки шторок на панели шасси.",
+					"comment_notification":"Установите блокировку шторок на шасси навесными замками.\n\n<font color='#828282'>Перетащите замок с панели инструментов на место петли для блокировки на панели шасси.</font>"
+				},
+				
+				
+				{
+					"action":"22",
+					
+					"set":[
+						{"target":"a_latch_right", "data":{"table":"grounded","state":"outside"}}
+					],
+					
+					"task":{"type":"tool", "target":"a_key_left1,a_key_left2", "value":"key"},
+					
+					"comment_success":"<font size='20'><b>Верно!</b></font>\n\nУстановлена блокировка встроенным замком.",
+					"comment_failed":"<font size='20'><b>Неверно!</b></font>\n\nПеретащите ключ с панели инструментов на личины для ключей на панели шасси.",
+					"comment_notification":"Установите блокировку шасси встроенными замками.\n\n<font color='#828282'>Перетащите ключ с панели инструментов на личины\nдля ключей на панель шасси.</font>"
+				},
+				
+				
+				{
+					"action":"23",
+					
+					"set":[
+						{"target":"a_key_left1", "data":{"state":"center"}},
+						{"target":"a_key_left2", "data":{"state":"center"}}
+					],
+					
+					"task":{"type":"wait", "value":"0.5"}
+				},
+				
+				
+				{
+					"action":"24",
+					
+					"set":[
+						{"target":"a_key_left1", "data":{"state":"left"}},
+						{"target":"a_key_left2", "data":{"state":"left"}}
+					],
+					
+					"task":{"type":"wait", "value":"0.5"}
+				},
+				
+				
+				{
+					"action":"25",
+					
+					"set":[
+						{"target":"a_latch_left", "data":{"table":"dont_work","state":"inside"}}
+					],
+					
+					"task":{"type":"tool", "target":"a_latch_left", "value":"table"},
+					
+					"comment_success":"<font size='20'><b>Верно!</b></font>\n\nВывешен плакат НЕ ВКЛЮЧАТЬ! РАБОТАЮТ ЛЮДИ!",
+					"comment_failed":"<font size='20'><b>Неверно!</b></font>\n\nПеретащите плакат с панели инструментов на место петли для блокировки рукоятки на панели шасси.",
+					"comment_notification":"Вывесите плакат НЕ ВКЛЮЧАТЬ! РАБОТАЮТ ЛЮДИ!\n\n<font color='#828282'>Перетащите плакат с панели инструментов на место петли для блокировки рукоятки на панели шасси.</font>"
+				},
+				
+				
+				{
+					"action":"26",
+					
+					"set":[
+						{"target":"a_latch_left", "data":{"state":"outside_labeled"}},
+						
+						{"target":"a_v_arrow", "data":{"angle":"0"}},
+						
+						{"target":"a_phase_green", "data":{"state":"off"}},
+						{"target":"a_phase_red", "data":{"state":"off"}},
+						{"target":"a_phase_yellow", "data":{"state":"off"}}
+					],
+					
+					"task":{"type":"wait", "value":"2.0"}
+				},
+				
+				
+				{
+					"action":"27",
+					
+					"set":[
+						{"target":"title", "data":"ВЫВОД ТРАНСФОРМАТОРА В РЕМОНТ"},
+						{"target":"screen", "data":"selector"},
+						
+						{"target":"column_state", "data":{"id":"A", "url":"situation_1/colonna_A.png"}},
+						{"target":"column_state", "data":{"id":"AB", "url":"situation_1/state_4/colonna_AB.png"}},
+						{"target":"column_state", "data":{"id":"B", "url":"situation_1/state_4/colonna_B.png"}}
+					],
+					
+					"task":{"type":"comment"},
+					
+					"comment_notification":"Проведены технические мероприятия:\n1. Отключено питание на распределительном щите 10 кВ\n    SG–5–01 в ячейке питания трансформатора Т–01A.\n2. Отключен выключатель нагрузки 10 кВ трансформатора\n    Т–01А."
+				},
+				
+				
+				{
+					"action":"28",
+					
+					"set":[
+						
+					],
+					
+					"task":{"type":"comment"},
+					
+					"comment_notification":"Убедитесь в отсутствии напряжения при помощи переносного указателя напряжения на ошиновке 0,4 кВ Т–01А."
+				},
+				
+				
+				{
+					"action":"29",
+					
+					"set":[
+						
+					],
+					
+					"task":{"type":"wait", "value":"2.0"}
+				},
+				
+				
+				{
+					"action":"30",
+					
+					"set":[
+						{"target":"title", "data":"ВЫВОД ТРАНСФОРМАТОРА В РЕМОНТ"},
+						{"target":"screen", "data":"device"},
+						{"target":"column", "data":{"type":"A Meters", "smoothing":"true"}},
+						
+						{"target":"a_m_v_arrow1", "data":{"angle":"-2"}},
+						{"target":"a_m_v_arrow2", "data":{"angle":"-2"}},
+						{"target":"a_m_v_arrow3", "data":{"angle":"-2"}},
+						{"target":"a_m_v_arrow4", "data":{"angle":"28"}},
+						
+						{"target":"a_m_grip", "data":{"state":"O"}}
+					],
+					
+					"task":{"type":"wait", "value":"1.0"}
+				},
+				
+				
+				{
+					"action":"31",
+					
+					"set":[
+						
+					],
+					
+					"task":{"type":"pick", "target":"a_m_grip", "value":"L1N"},
+					
+					"comment_success":"",
+					"comment_failed":"<font size='20'><b>Неверно!</b></font>\n\nНажмите на переключатель и поверните рукоятку вправо три раза.",
+					"comment_notification":"Проверьте отсутствие напряжения на Ввод 1 SW1\nпо вольтметру при помощи переключателя SV2.\n\n<font color='#828282'>Нажмите на переключатель и последовательно поверните рукоятку в нужную сторону, чтобы проверить напряжение\nна трёх фазах.</font>"
+				},
+				
+				
+				{
+					"action":"32",
+					
+					"set":[
+					
+						{"target":"a_m_v_arrow1", "data":{"angle":"-2"}},
+						{"target":"a_m_v_arrow2", "data":{"angle":"-2"}},
+						{"target":"a_m_v_arrow3", "data":{"angle":"-2"}},
+						{"target":"a_m_v_arrow4", "data":{"angle":"35"}},
+						
+						{"target":"a_m_grip", "data":{"state":"L1N"}}
+					],
+					
+					"task":{"type":"pick", "target":"a_m_grip", "value":"L2N"},
+					
+					"comment_success":"",
+					"comment_failed":"<font size='20'><b>Неверно!</b></font>\n\nНажмите на кнопку переключателя SV2 три раза."
+				},
+				
+				
+				{
+					"action":"33",
+					
+					"set":[
+					
+						{"target":"a_m_v_arrow1", "data":{"angle":"-2"}},
+						{"target":"a_m_v_arrow2", "data":{"angle":"-2"}},
+						{"target":"a_m_v_arrow3", "data":{"angle":"-2"}},
+						{"target":"a_m_v_arrow4", "data":{"angle":"28"}},
+						
+						{"target":"a_m_grip", "data":{"state":"L2N"}}
+					],
+					
+					"task":{"type":"pick", "target":"a_m_grip", "value":"L3N"},
+					
+					"comment_success":"<font size='20'><b>Верно!</b></font>\n\nНапряжение на Ввод1 SW1 отсутствует на трёх фазах.",
+					"comment_failed":"<font size='20'><b>Неверно!</b></font>\n\nНажмите на кнопку переключателя SV2 три раза."
+				},
+				
+				
+				{
+					"action":"34",
+					
+					"set":[
+						{"target":"a_m_v_arrow1", "data":{"angle":"-2"}},
+						{"target":"a_m_v_arrow2", "data":{"angle":"-2"}},
+						{"target":"a_m_v_arrow3", "data":{"angle":"-2"}},
+						{"target":"a_m_v_arrow4", "data":{"angle":"30"}},
+						
+						{"target":"a_m_grip", "data":{"state":"L3N"}}
+					],
+					
+					"task":{"type":"wait", "value":"0.25"}
+				},
+				
+				
+				{
+					"action":"35",
+					
+					"set":[
+						
+					],
+					
+					"task":{"type":"wait", "value":"1.25"}
+				},
+				
+				
+				{
+					"action":"36",
+					
+					"set":[
+						{"target":"title", "data":"КОЛОННА ВВОД 1 SW 1"},
+						{"target":"screen", "data":"device"},
+						{"target":"column", "data":{"type":"A", "smoothing":"false"}},
+						
+						{"target":"a_phase_green", "data":{"state":"off"}},
+						{"target":"a_phase_red", "data":{"state":"off"}},
+						{"target":"a_phase_yellow", "data":{"state":"off"}},
+						
+						{"target":"a_lamp_green", "data":{"state":"off","text":"ОТКЛ."}},
+						{"target":"a_lamp_red", "data":{"state":"off","text":"ВКЛ."}},
+						{"target":"a_lamp_yellow", "data":{"state":"off","text":"АВАРИЯ"}},
+						
+						{"target":"a_button_green", "data":{"state":"normal","text":"ON"}},
+						{"target":"a_button_red", "data":{"state":"normal","text":"OFF"}},
+						
+						{"target":"a_grip_left", "data":{"state":"right","text":"Внеш Внутр"}},
+						{"target":"a_grip_right", "data":{"state":"right","text":"ABP Ручн"}},
+						{"target":"a_grip_down", "data":{"state":"left","text":"sw1 tie sw2"}},
+						
+						
+						{"target":"a_lamp_reset", "data":{"state":"off"}},
+						{"target":"a_big_arm", "data":{"state":"inside"}},
+						{"target":"a_caps", "data":{"state":"opened"}},
+						{"target":"a_push_on", "data":{"state":""}},
+						{"target":"a_push_off", "data":{"state":""}},
+						{"target":"a_indicator_l", "data":{"state":"off"}},
+						{"target":"a_indicator_r", "data":{"state":"charged_ok"}},
+						{"target":"a_button_bpfe", "data":{"state":"normal"}},
+						{"target":"a_key_up1", "data":{"state":"center_no_key"}},
+						{"target":"a_key_up2", "data":{"state":"center_no_key"}},
+						{"target":"a_key_left1", "data":{"state":"left"}},
+						{"target":"a_key_left2", "data":{"state":"left"}},
+						{"target":"a_latch_up", "data":{"state":"inside"}},
+
+						{"target":"a_latch_left", "data":{"table":"dont_work","state":"inside"}},
+						{"target":"a_latch_left", "data":{"state":"outside_labeled"}},
+						{"target":"a_latch_right", "data":{"table":"grounded","state":"outside"}},
+						{"target":"a_button_confirm", "data":{"state":"normal"}},
+						
+						{"target":"a_s_arrow", "data":{"state":"down"}},
+						
+						{"target":"a_handle_hole", "data":{"state":""}},
+						{"target":"a_handle", "data":{"state":"none"}},
+						{"target":"a_hidden_handle", "data":{"state":"hidden"}},
+						
+						{"target":"a_cells", "data":{"state":"locked"}}
+					],
+					
+					"task":{"type":"comment"},
+					
+					"comment_notification":"Установлено переносное заземление на ошиновке 0,4 кВ Т–01А."
+				},
+				
+				
+				{
+					"action":"37",
+					
+					"task":{"type":"tool", "target":"a_latch_right", "value":"table"},
+					
+					"comment_success":"<font size='20'><b>Верно!</b></font>\n\nВывешен плакат ЗАЗЕМЛЕНО.",
+					"comment_failed":"<font size='20'><b>Неверно!</b></font>\n\nПеретащите плакат с панели инструментов на место петли для блокировки шторок на панели шасси.",
+					"comment_notification":"Вывесите плакат ЗАЗЕМЛЕНО.\n\n<font color='#828282'>Перетащите плакат с панели инструментов на место петли для блокировки шторок на панели шасси.</font>"
+				},
+				
+				
+				{
+					"action":"38",
+					
+					"set":[
+						{"target":"a_latch_right", "data":{"state":"outside_labeled"}}
+					],
+					
+					"task":{"type":"wait", "value":"1.0"}
+				},
+				
+				
+				{
+					"action":"39",
+					
+					"set":[
+						{"target":"title", "data":"ВЫВОД ТРАНСФОРМАТОРА В РЕМОНТ"},
+						{"target":"screen", "data":"selector"},
+						
+						{"target":"column_state", "data":{"id":"A", "url":"situation_1/state_4/colonna_A.png"}},
+						{"target":"column_state", "data":{"id":"AB", "url":"situation_1/state_4/colonna_AB.png"}},
+						{"target":"column_state", "data":{"id":"B", "url":"situation_1/state_4/colonna_B.png"}}
+					],
+					
+					"task":{"type":"comment"},
+					
+					"comment_notification":"Силовой трансформатор Т–01А выведен в ремонт, питание потребителей 1-ой секции распределительного щита SG–3–01 переведено к трансформатору T–01B."
+				},
+				
+				
+				{
+					"action":"40",
+					
+					"set":[
+						
+					],
+					
+					"task":{"type":"wait", "value":"5.0"}
+				}
+				
+			]
+			
+		}
+	]
+}
